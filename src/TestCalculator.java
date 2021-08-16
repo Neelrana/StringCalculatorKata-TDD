@@ -53,6 +53,9 @@ public class TestCalculator {
         assertEquals(6,c.Add("//[***]\n1***2***3"));
     }
 
-
+    @Test
+    public void TestMultiDelimiterManyNumString(){
+        assertEquals(6,c.Add("//[*][%]\n1*2%3"));
+    }
 
 }
