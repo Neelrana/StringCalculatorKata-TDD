@@ -43,4 +43,9 @@ public class TestCalculator {
         }
     }
 
+    @Test
+    public void TestIgnoredGreaterThan1000Num(){
+        assertEquals(2,c.Add("2,1001"));
+    }
+
 }

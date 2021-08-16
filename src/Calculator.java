@@ -26,6 +26,10 @@ public class Calculator {
                         negArr+=(","+numArr[j]);
                     }
                 }
+                else if(Integer.parseInt(numArr[j]) > 1000){
+                    numArr[j] = "0" ;
+                    sum += Integer.parseInt(numArr[j]);
+                }
                 else{
                     sum += Integer.parseInt(numArr[j]);
                 }
