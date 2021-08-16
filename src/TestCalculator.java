@@ -28,4 +28,9 @@ public class TestCalculator {
         assertEquals(6,c.Add("1\n2,3"));
     }
 
+    @Test
+    public void TestDiffDelimiterManyNumString(){
+        assertEquals(3,c.Add("//*\n1*2"));
+    }
+
 }
