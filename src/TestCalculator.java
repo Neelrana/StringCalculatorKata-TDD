@@ -12,4 +12,9 @@ public class TestCalculator {
     public void TestOneNumString(){
         assertEquals(10,c.Add("10"));
     }
+
+    @Test
+    public void TestTwoNumString(){
+        assertEquals(15,c.Add("5,10"));
+    }
 }
