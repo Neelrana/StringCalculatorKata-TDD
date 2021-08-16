@@ -23,4 +23,9 @@ public class TestCalculator {
         assertEquals(30,c.Add("5,10,15"));
     }
 
+    @Test
+    public void TestNewLineManyNumString(){
+        assertEquals(6,c.Add("1\n2,3"));
+    }
+
 }

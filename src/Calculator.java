@@ -7,7 +7,7 @@ public class Calculator {
         }
         else{
             String number =num.replaceAll(" ", "");
-            String[] numArr = number.split(",");
+            String[] numArr = number.split(",|\n");
             for(int j = 0 ; j < numArr.length ; j++ ){
                 sum += Integer.parseInt(numArr[j]);
             }
