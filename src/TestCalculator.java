@@ -17,4 +17,10 @@ public class TestCalculator {
     public void TestTwoNumString(){
         assertEquals(15,c.Add("5,10"));
     }
+
+    @Test
+    public void TestAllowManyNumString(){
+        assertEquals(30,c.Add("5,10,15"));
+    }
+
 }
