@@ -33,4 +33,14 @@ public class TestCalculator {
         assertEquals(3,c.Add("//*\n1*2"));
     }
 
+    @Test
+    public void TestNegativeNumberIsUsedString(){
+        try{
+            c.Add("-6,-5,4");
+        }
+        catch(IllegalArgumentException e){
+            assertEquals("Negative numbers are not allowed -6,-5",e.getMessage());
+        }
+    }
+
 }

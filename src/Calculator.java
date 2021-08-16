@@ -15,8 +15,24 @@ public class Calculator {
         else{
             String number =num.replaceAll(" ", "");
             String[] numArr = number.split(",|\n");
+            String negArr = "" ;
             for(int j = 0 ; j < numArr.length ; j++ ){
-                sum += Integer.parseInt(numArr[j]);
+                //chceking negative number
+                if(Integer.parseInt(numArr[j])<0){
+                    if(negArr.equals("")){
+                        negArr = numArr[j];
+                    }
+                    else{
+                        negArr+=(","+numArr[j]);
+                    }
+                }
+                else{
+                    sum += Integer.parseInt(numArr[j]);
+                }
+
+            }
+            if(!negArr.equals("")){
+                throw new IllegalArgumentException("Negative numbers are not allowed "+negArr);
             }
             return sum;
         }
