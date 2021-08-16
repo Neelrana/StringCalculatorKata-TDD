@@ -48,4 +48,11 @@ public class TestCalculator {
         assertEquals(2,c.Add("2,1001"));
     }
 
+    @Test
+    public void TestManyDelimiterManyNumString(){
+        assertEquals(6,c.Add("//[***]\n1***2***3"));
+    }
+
+
+
 }

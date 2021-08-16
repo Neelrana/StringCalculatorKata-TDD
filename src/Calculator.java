@@ -6,11 +6,22 @@ public class Calculator {
             return 0;
         }
         else if(num.startsWith("//")) {
-            String del;
-            del = num.substring(2, num.indexOf("\n")).trim();
-            num = num.substring(num.indexOf("\n") + 1); //1***2***3
-            del = Pattern.quote(del);
-            sum = total(num, del);
+            String del ;
+            del = num.substring(2,num.indexOf("\n")).trim();
+            if(del.startsWith("[") && del.endsWith("]")){
+                del=del.substring(1,del.length()-1); //+][%
+                //Test Multiple Delimiter Many Number String
+                num = num.substring(num.indexOf("\n") + 1); //1***2***3
+                del = Pattern.quote(del);
+                sum = total(num,del);
+            }
+            else{
+                del = num.substring(2,3);
+                del= Pattern.quote(del);
+                num = num.substring(num.indexOf("\n")+1); //remove string till '\n'
+                sum = total(num,del);
+            }
+            return sum;
         }
         else{
             String number =num.replaceAll(" ", "");
@@ -40,7 +51,6 @@ public class Calculator {
             }
             return sum;
         }
-        return sum;
     }
     int total(String num, String del){
         int sum = 0 ;
