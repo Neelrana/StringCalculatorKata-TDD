@@ -1,6 +1,12 @@
 import java.util.regex.Pattern;
 public class Calculator {
     int Add(String num){
-        return 0;
+        if(num.isEmpty()){
+            return 0;
+        }
+        else{
+            return Integer.parseInt(num);
+        }
+
     }
 }

@@ -7,4 +7,9 @@ public class TestCalculator {
     public void TestEmptyString(){
         assertEquals(0,c.Add(""));
     }
+
+    @Test
+    public void TestOneNumString(){
+        assertEquals(10,c.Add("10"));
+    }
 }
