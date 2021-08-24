@@ -1,9 +1,9 @@
-# StringCalculatorKata-TDD
-Creating a String Calculator with the help of TDD (Test Driven Development)
-I coded this task in JAVA. 
-In java i used Array to perform the operations.
+# StringCalculatorKata-TDD<br>
+Creating a String Calculator with the help of TDD (Test Driven Development)<br>
+I coded this task in JAVA.<br> 
+In java i used Array to perform the operations.<br><br>
 
-This are the steps / condition which i have solved in this solution 
+This are the steps / condition which i have solved in this solution <br><br>
 
 1. Create a simple String calculator with a method signature:<br>
 ———————————————<br>
